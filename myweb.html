@@ -1,0 +1,135 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Class Names</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Animal Class Names</h1>
+    <ul id="class-names">
+         Class names will be dynamically added here 
+    </ul>
+</div>
+
+<script>
+    // JavaScript code to dynamically populate the class names
+    const class_names = ["Bear", "Bull", "Cheetah", "Crocodile", "Elephant", "Jaguar", "Leopard", "Lion", "Rhinoceros", "Tiger"];
+
+    const classNamesList = document.getElementById("class-names");
+
+    class_names.forEach(className => {
+        const listItem = document.createElement("li");
+        listItem.textContent = className;
+        classNamesList.appendChild(listItem);
+    });
+</script>
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Class Names with Pictures</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        img {
+            margin-right: 10px;
+            width: 50px; /* Adjust image width as needed */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Animal Class Names with Pictures</h1>
+    <ul id="class-names">
+        <!-- Class names and pictures will be dynamically added here -->
+    </ul>
+</div>
+
+<script>
+    // JavaScript code to dynamically populate the class names with pictures
+    const class_names_with_images = {
+        "Bear": "D:\mini_project\imagesbear.png",
+        "Bull": "D:\mini_project\imagesbull.png",
+        "Cheetah": "D:\mini_project\imagescheetah.png",
+        "Crocodile": "D:\mini_project\imagescrocodile.png",
+        "Elephant": "D:\mini_project\imageselephant.png",
+        "Jaguar": "D:\mini_project\imagesjaguar.png",
+        "Leopard": "D:\mini_project\imagesleopard.png",
+        "Lion": "D:\mini_project\imageslion.png",
+        "Rhinoceros": "D:\mini_project\imagesrhinoceros.png",
+        "Tiger": "D:\mini_project\imagestiger.png"
+    };
+
+    const classNamesList = document.getElementById("class-names");
+
+    for (const className in class_names_with_images) {
+        const listItem = document.createElement("li");
+        const img = document.createElement("img");
+        img.src = class_names_with_images[className];
+        img.alt = className;
+        listItem.appendChild(img);
+
+        const textNode = document.createTextNode(className);
+        listItem.appendChild(textNode);
+
+        classNamesList.appendChild(listItem);
+    }
+</script>
+
+</body>
+</html>
